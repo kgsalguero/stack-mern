@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NewPlace=() =>{
+const NewPlace = () => {
     return(
-        <h1> New Place</h1>
+        <h1> New Place </h1>
     );
 }
 

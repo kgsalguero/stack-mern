@@ -1,28 +1,28 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import Users from './user/pages/User';
-import NewPlace from './user/pages/NewPlace'
+import NewPlace from './places/pages/NewPlace';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
+
 
 function App() {
   return (
     <Router>
-      <MainNavigation/>
-      <main>
-        <Switch>
-          <Route path="/" exact>
-            <Users/>
-          </Route>
+      <MainNavigation />
+        <main>
+            <Switch>
+              <Route path="/" exact>
+                <Users />
+              </Route>
 
-          <Route path='/places/new' exact>
-            <NewPlace/>
-          </Route>
+              <Route path="/places/new" exact >
+                <NewPlace />
+              </Route>
 
-          <Redirect to="/"/>
-        </Switch>
-      </main>
+              <Redirect to="/" />
+            </Switch>
+          </main>
     </Router>
-
   );
 }
 
